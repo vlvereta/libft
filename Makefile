@@ -16,20 +16,25 @@ NAME = libft.a
 
 FLAGS = -Wall -Wextra -Werror
 
-OBJ = ft_atoi.o ft_binarysearch.o ft_byte_to_bits.o ft_bzero.o \
-	ft_countwords.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o \
-	ft_islower.o ft_isprint.o ft_isupper.o ft_itoa.o ft_itoa_base.o \
-	ft_lstadd.o ft_lstdel.o ft_lstdelone.o ft_lstiter.o ft_lstmap.o \
-	ft_lstnew.o ft_memalloc.o ft_memccpy.o ft_memchr.o ft_memcmp.o \
-	ft_memcpy.o ft_memdel.o ft_memmove.o ft_memset.o ft_power.o \
-	ft_putchar.o ft_putchar_fd.o ft_putendl.o ft_putendl_fd.o ft_putnbr.o \
-	ft_putnbr_fd.o ft_putstr.o ft_putstr_fd.o ft_sort_array_nb.o ft_sqrt.o \
-	ft_strcat.o ft_strchr.o ft_strclr.o ft_strcmp.o ft_strcpy.o ft_strdel.o \
-	ft_strdup.o ft_strequ.o ft_striter.o ft_striteri.o ft_strjoin.o \
-	ft_strlcat.o ft_strlen.o ft_strmap.o ft_strmapi.o ft_strncat.o \
-	ft_strncmp.o ft_strncpy.o ft_strnequ.o ft_strnew.o ft_strnstr.o \
-	ft_strrchr.o ft_strsplit.o ft_strstr.o ft_strsub.o ft_strtrim.o ft_swap.o \
-	ft_tolower.o ft_toupper.o
+OBJ = srcs/ft_atoi.o srcs/ft_binarysearch.o srcs/ft_byte_to_bits.o \
+	srcs/ft_bzero.o srcs/ft_countwords.o srcs/ft_isalnum.o \
+	srcs/ft_isalpha.o srcs/ft_isascii.o srcs/ft_isdigit.o \
+	srcs/ft_islower.o srcs/ft_isprint.o srcs/ft_isupper.o srcs/ft_itoa.o \
+	srcs/ft_itoa_base.o srcs/ft_lstadd.o srcs/ft_lstdel.o srcs/ft_lstdelone.o \
+	srcs/ft_lstiter.o srcs/ft_lstmap.o srcs/ft_lstnew.o srcs/ft_memalloc.o \
+	srcs/ft_memccpy.o srcs/ft_memchr.o srcs/ft_memcmp.o srcs/ft_memcpy.o \
+	srcs/ft_memdel.o srcs/ft_memmove.o srcs/ft_memset.o srcs/ft_power.o \
+	srcs/ft_putchar.o srcs/ft_putchar_fd.o srcs/ft_putendl.o \
+	srcs/ft_putendl_fd.o srcs/ft_putnbr.o srcs/ft_putnbr_fd.o \
+	srcs/ft_putstr.o srcs/ft_putstr_fd.o srcs/ft_sort_array_nb.o \
+	srcs/ft_sqrt.o srcs/ft_strcat.o srcs/ft_strchr.o srcs/ft_strclr.o \
+	srcs/ft_strcmp.o srcs/ft_strcpy.o srcs/ft_strdel.o srcs/ft_strdup.o \
+	srcs/ft_strequ.o srcs/ft_striter.o srcs/ft_striteri.o srcs/ft_strjoin.o \
+	srcs/ft_strlcat.o srcs/ft_strlen.o srcs/ft_strmap.o srcs/ft_strmapi.o \
+	srcs/ft_strncat.o srcs/ft_strncmp.o srcs/ft_strncpy.o srcs/ft_strnequ.o \
+	srcs/ft_strnew.o srcs/ft_strnstr.o srcs/ft_strrchr.o srcs/ft_strsplit.o \
+	srcs/ft_strstr.o srcs/ft_strsub.o srcs/ft_strtrim.o srcs/ft_swap.o \
+	srcs/ft_tolower.o srcs/ft_toupper.o
 
 all: $(NAME)
 
@@ -37,7 +42,7 @@ $(NAME): $(OBJ)
 	@	ar rc $(NAME) $(OBJ)
 
 %.o: %.c
-	@	$(CC) -c $< -o $@ $(FLAGS)
+	@	$(CC) -c $< -o $@ $(FLAGS) -Iincludes
 
 clean:
 	@	rm -f $(OBJ)
