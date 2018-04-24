@@ -17,11 +17,8 @@ char	*ft_strdup(const char *s1)
 	unsigned int	len;
 	char			*ptr;
 
-	if (s1)
-	{
-		len = ft_strlen(s1);
-		if ((ptr = ft_strnew(len)))
-			return (ft_strcpy(ptr, s1));
-	}
+	len = ft_strlen(s1);
+	if ((ptr = ft_strnew(len)))
+		return (ft_strcpy(ptr, s1));
 	return (NULL);
 }

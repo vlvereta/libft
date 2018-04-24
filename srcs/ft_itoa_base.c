@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*write_array(unsigned long long number, int base, int size, int sign)
+static char	*write_array(unsigned long number, int base, int size, int sign)
 {
 	int		temp;
 	char	*array;
@@ -33,11 +33,11 @@ char	*write_array(unsigned long long number, int base, int size, int sign)
 	return (array);
 }
 
-char	*ft_itoa_base(long long value, int base)
+char		*ft_itoa_base(long long value, int base)
 {
-	int					sign;
-	int					size;
-	unsigned long long	number;
+	int				sign;
+	int				size;
+	unsigned long	number;
 
 	sign = (value < 0 ? 1 : 0);
 	size = (value < 0 || !value ? 1 : 0);
